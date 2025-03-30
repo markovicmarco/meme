@@ -1,0 +1,88 @@
+---
+import BlogCard from '@/components/BlogCard.astro'
+import Link from '@/components/Link.astro'
+import PageHead from '@/components/PageHead.astro'
+import { buttonVariants } from '@/components/ui/button'
+import { SITE } from '@/consts'
+import Layout from '@/layouts/Layout.astro'
+import { getRecentPosts } from '@/lib/data-utils'
+
+const blog = await getRecentPosts(SITE.featuredPostCount)
+---
+
+<Layout>
+  <PageHead slot="head" title="Home" />
+  <img class="aspect-3/2 object-cover ..." src="https://i.imghippo.com/files/ojh5563Oa.png" />
+  <section>
+    <div class="rounded-lg border">
+      <div class="flex flex-col space-y-1.5 p-6">
+        <h3 class="text-3xl leading-none font-medium">brucy</h3>
+        <p class="text-muted-foreground text-sm"> 
+          /solana/ meme <span class="font-medium">pumpfun</span>
+        </p>
+      </div>
+      <div class="p-6 pt-0">
+        <p class="text-muted-foreground mb-2 text-sm">
+          The "Brucy" meme takes a moment of dramatic, 
+          over the top <Link
+            href="https://x.com/brucyonsol"
+            class="text-foreground"
+            external
+            underline>Twitter</Link
+          >, <Link
+            href="https://t.me/brucyonsol"
+            class="text-foreground"
+            external
+            underline>Telegram</Link
+          >, and <Link
+            href="https://dexscreener.com/solana/9e56hnzqwx6lwdpcxyyrgelmgtedg8svseub8qpttqpb"
+            class="text-foreground"
+            external
+            underline>dexscreener</Link
+          >. and turns it into a symbol of perserverance, and encouragement. <Link
+            href="https://moontok.io/coins/brucy"
+            class="text-foreground"
+            external
+            underline>Moontok</Link
+          > view.
+        </p>
+        <p class="text-muted-foreground text-sm">
+          Token locking refers to the practice of a long-term commitment <Link
+            href="https://app.streamflow.finance/contract/solana/mainnet/6x39HH5yamckrK9QKVRCKnyqeKASxXba4DszkrCoLtn9"
+            class="text-foreground"
+            underline
+            external>Streamflow</Link
+          > finance. To learn more about why brucy, read this
+          post: <Link
+            href="/blog/the-state-of-static-blogs"
+            class="text-foreground"
+            underline>The State of True Memes on Solana</Link
+          >.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="flex flex-col gap-y-4">
+    <h2 class="text-2xl font-medium">Latest posts</h2>
+    <ul class="flex flex-col gap-y-4">
+      {
+        blog.map((post) => (
+          <li>
+            <BlogCard entry={post} />
+          </li>
+        ))
+      }
+    </ul>
+    <div class="flex justify-center">
+      <Link
+        href="/blog"
+        class={buttonVariants({ variant: 'ghost' }) + ' group'}
+      >
+        See all posts <span
+          class="ml-1.5 transition-transform group-hover:translate-x-1"
+          >&rarr;</span
+        >
+      </Link>
+    </div>
+  </section>
+</Layout>
