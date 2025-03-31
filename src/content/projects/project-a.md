@@ -2,7 +2,7 @@
 name: 'Brycy on Dexscreener'
 description: 'The intersection of brucy culture and cryptocurrency has created a fascinating space.'
 tags: ['meme', 'pumpfun', 'brucy', 'dexsreener']
-image: 'https://i.imghippo.com/files/SiM8834OCE.png'
+image: 'https://i.imghippo.com/files/wuR3199QSM.png'
 link: 'https://dexscreener.com/solana/9e56hnzqwx6lwdpcxyyrgelmgtedg8svseub8qpttqpb'
 startDate: '2025-03-19'
 endDate: '2824-03-01'
