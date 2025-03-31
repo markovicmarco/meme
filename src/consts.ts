@@ -5,7 +5,7 @@ export const SITE: Site = {
   locale: 'en-US',
   description:
     'brucy is community-owned meme on solana, created and spread organically by community members.',
-  href: 'https://brucyonsol.xyz',
+  href: 'https://meme-sigma-puce.vercel.app/',
   featuredPostCount: 2,
   postsPerPage: 3,
 }
