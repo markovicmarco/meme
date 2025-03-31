@@ -2,7 +2,7 @@
 name: 'Streamflow Locked Tokens'
 description: 'This is a key tool for projects looking to demonstrate their long-term commitment.'
 tags: ['meme', 'pumpfun', 'brucy', 'dexsreener']
-image: 'https://i.imghippo.com/files/Nj1619eU.png'
+image: 'https://i.imghippo.com/files/QIGn9256Vjw.png'
 link: 'https://app.streamflow.finance/contract/solana/mainnet/6x39HH5yamckrK9QKVRCKnyqeKASxXba4DszkrCoLtn9'
 startDate: '2025-03-19'
 endDate: '2824-03-01'
