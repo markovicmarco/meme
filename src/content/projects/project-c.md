@@ -1,8 +1,8 @@
 ---
 name: 'Value Beyond Monetary Worth'
-description: 'The ability of a meme to spread rapidly and reach a wide audience..'
+description: 'The ability of a meme to spread rapidly and reach a wide audience.'
 tags: ['meme', 'brucy', 'dexscreener']
-image: 'https://i.imghippo.com/files/cmx1612nrY.png'
+image: 'https://i.imghippo.com/files/UkgV1508Bg.png'
 link: 'https://t.me/brucyonsol'
 startDate: '2025-03-19'
 endDate: '2824-03-01'
