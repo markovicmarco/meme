@@ -2,6 +2,17 @@
 import { SITE } from '@/consts'
 import { ClientRouter } from 'astro:transitions'
 import Favicons from './Favicons.astro'
+
+interface Props {
+  title: string
+  description: string
+  image?: string
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+
+const { title, description, image = '/static/twitter-card.png' } = Astro.props
+
 ---
 
 <head>
@@ -16,7 +27,7 @@ import Favicons from './Favicons.astro'
   <meta name="description" content={SITE.description} />
   <meta name="author" content={SITE.title} />
   <meta name="robots" content="index, follow" />
-
+  <meta property="og:image" content={new URL(image, Astro.url)} />
   <meta name="HandheldFriendly" content="True" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -25,6 +36,12 @@ import Favicons from './Favicons.astro'
     name="format-detection"
     content="telephone=no,date=no,address=no,email=no,url=no"
   />
+
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={Astro.url} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
   <meta
     name="theme-color"
