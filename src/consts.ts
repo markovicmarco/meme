@@ -4,7 +4,7 @@ export const SITE: Site = {
   title: 'brucy',
   locale: 'en-US',
   description:
-    'astro-erudite is a opinionated, unstyled blogging template—built with Astro, Tailwind, and shadcn/ui.',
+    'brucy is community-owned meme on solana, created and spread organically by community members.',
   href: 'https://brucyonsol.xyz',
   featuredPostCount: 2,
   postsPerPage: 3,
