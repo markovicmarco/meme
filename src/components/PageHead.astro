@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { title = SITE.title, description = SITE.description } = Astro.props
-const image = new URL('https://meme-sigma-puce.vercel.app/static/twitter-card.png', Astro.site)
+const image = new URL('/static/1200x6300.png', Astro.site)
 ---
 
 <title>{`${title} | ${SITE.title}`}</title>
